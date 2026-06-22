@@ -11,29 +11,15 @@ export default function MenuPage() {
 
   return (
     <main className="relative w-full max-w-full overflow-x-hidden">
-      {/* Slim top bar */}
-      <div className="fixed inset-x-0 top-0 z-[150] flex justify-center px-4 pt-[clamp(14px,2.4vw,26px)]">
-        <nav className="flex w-full max-w-5xl items-center justify-between gap-6 rounded-full border border-cream/10 bg-white/75 px-2.5 py-2 pl-4 shadow-[0_14px_38px_rgba(20,48,28,0.10)] backdrop-blur-2xl sm:px-3 sm:py-3 sm:pl-5">
-          <a
-            href="#menu"
-            className="flex flex-none items-center gap-2 rounded-full px-3 py-1.5 font-body text-[14px] text-mist transition-colors hover:text-cream"
-          >
-            <Icon name="chevLeft" size={18} />
-            Back to site
-          </a>
-          <a href="#hero" className="hidden flex-none items-center gap-2.5 sm:flex" aria-label="Forest Cafe — home">
-            <img src="/assets/logo-transparent.png" alt="Forest Cafe" className="h-8 w-auto" />
-            <span className="font-display text-[15px] font-semibold tracking-tight text-cream">
-              Forest Cafe
-            </span>
-          </a>
-          <a
-            href="#reserve"
-            className="inline-flex items-center justify-center rounded-full bg-lime px-5 py-2.5 font-display text-[14px] font-semibold tracking-tight text-white shadow-[0_10px_26px_rgba(234,93,42,0.28)] transition-transform duration-200 hover:-translate-y-0.5"
-          >
-            Reserve
-          </a>
-        </nav>
+      {/* Back button */}
+      <div className="fixed left-[clamp(16px,3vw,32px)] top-[clamp(16px,2.4vw,28px)] z-150">
+        <a
+          href="#menu"
+          className="inline-flex items-center gap-2 rounded-full border border-cream/10 bg-white/75 px-4 py-2.5 font-body text-[14px] text-mist shadow-[0_14px_38px_rgba(20,48,28,0.10)] backdrop-blur-2xl transition-colors hover:text-cream"
+        >
+          <Icon name="chevLeft" size={18} />
+          Back
+        </a>
       </div>
 
       {/* Hero header — photo with gray overlay */}

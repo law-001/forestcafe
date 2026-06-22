@@ -11,10 +11,10 @@
      bg-moss / bg-pine                              → fresh green / deep brand green
 ---------------------------------------------------------------------------- */
 @theme {
-  --color-ink: #f6f1e3;        /* page base — warm cream */
-  --color-ink-2: #efe9d6;      /* alt section surface */
+  --color-ink: #f7efdf;        /* page base — warm cream */
+  --color-ink-2: #f0e7d1;      /* alt section surface */
   --color-surface: #ffffff;    /* card base */
-  --color-surface-2: #f4eedb;  /* raised / hover card */
+  --color-surface-2: #f5ecd6;  /* raised / hover card */
   --color-pine: #14301c;       /* deep brand green (text on cream) */
   --color-moss: #4f8f3a;       /* fresh leaf green */
   --color-lime: #ea5d2a;       /* primary accent — vibrant tangerine */
@@ -37,7 +37,7 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 96px;
+    scroll-padding-top: 0;
   }
   body {
     margin: 0;

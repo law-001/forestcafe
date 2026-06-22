@@ -67,7 +67,7 @@ export default function Hero() {
               data-hero-line
               src="/assets/logo2.png"
               alt="Forest Cafe"
-              className="block w-[clamp(14rem,38vw,28rem)] drop-shadow-[0_18px_36px_rgba(0,0,0,0.45)]"
+              className="block w-[clamp(18.25rem,calc(46vw+20px),35.25rem)]"
             />
           </span>
         </h1>
@@ -84,14 +84,14 @@ export default function Hero() {
           <a
             data-hero-cta
             href="#reserve"
-            className="inline-flex h-14 items-center justify-center rounded-full bg-lime px-8 font-display text-[16px] font-semibold tracking-tight text-white shadow-[0_8px_28px_rgba(234,93,42,0.28)] transition-transform duration-200 hover:-translate-y-1"
+            className="inline-flex h-14 items-center justify-center rounded-full bg-lime px-8 font-display text-[16px] font-semibold tracking-tight text-white shadow-[0_6px_14px_rgba(20,48,28,0.28)] transition-transform duration-200 hover:-translate-y-1"
           >
             Reserve a Table
           </a>
           <a
             data-hero-cta
             href="#menu"
-            className="inline-flex h-14 items-center justify-center rounded-full border border-white/30 bg-white/10 px-8 font-display text-[16px] font-medium text-white backdrop-blur-sm transition-colors duration-200 hover:border-white/60 hover:bg-white/20"
+            className="inline-flex h-14 items-center justify-center rounded-full border border-white/30 bg-white/15 px-8 font-display text-[16px] font-medium text-white backdrop-blur-md transition-colors duration-200 hover:border-white/60 hover:bg-white/25"
           >
             View the Menu
           </a>

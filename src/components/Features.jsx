@@ -19,7 +19,7 @@ export default function Features() {
 
         <div className="grid grid-flow-dense grid-cols-1 gap-3.5 md:grid-cols-4 md:auto-rows-[clamp(10.5rem,13vw,14rem)]">
           {/* Card 1 — hero image, 2x2 */}
-          <Reveal className="group relative overflow-hidden rounded-3xl md:col-span-2 md:row-span-2">
+          <Reveal className="group relative isolate overflow-hidden rounded-3xl transform-gpu md:col-span-2 md:row-span-2">
             <img
               src="/assets/interior-trees.jpg"
               alt="Indoor trees rising to the ceiling with woven lanterns"
@@ -82,7 +82,7 @@ export default function Features() {
           </Reveal>
 
           {/* Card 5 — moss image wide */}
-          <Reveal delay={120} className="group relative overflow-hidden rounded-3xl md:col-span-2">
+          <Reveal delay={120} className="group relative isolate overflow-hidden rounded-3xl transform-gpu md:col-span-2">
             <img
               src="/assets/moss-wall.jpg"
               alt="Preserved-moss feature wall with Forest Cafe signage"
@@ -100,7 +100,7 @@ export default function Features() {
           </Reveal>
 
           {/* Card 6 — seating image wide */}
-          <Reveal delay={160} className="group relative overflow-hidden rounded-3xl md:col-span-2">
+          <Reveal delay={160} className="group relative isolate overflow-hidden rounded-3xl transform-gpu md:col-span-2">
             <img
               src="/assets/seating-overhead.jpg"
               alt="Curved olive banquette seating from above"

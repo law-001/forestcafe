@@ -31,7 +31,6 @@ export default function App() {
       {/* <Nav /> — temporarily hidden, file kept for re-enable */}
       <Hero />
       <Marquee />
-      <Statement />
       <Features />
       <Menu />
       <Gallery />

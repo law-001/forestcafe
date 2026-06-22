@@ -1,7 +1,31 @@
+import { useRef } from 'react'
 import { menuCategories } from '../data'
 import { Reveal, Eyebrow, Icon } from './primitives'
+import { gsap, useGSAP, reduced } from '../lib/gsap'
 
 export default function Menu() {
+  const listRef = useRef(null)
+
+  useGSAP(
+    () => {
+      const items = listRef.current?.querySelectorAll('[data-menu-item]')
+      if (!items?.length) return
+      if (reduced()) {
+        gsap.set(items, { opacity: 1, x: 0 })
+        return
+      }
+      gsap.from(items, {
+        opacity: 0,
+        x: -80,
+        duration: 0.9,
+        ease: 'power3.out',
+        stagger: 0.1,
+        scrollTrigger: { trigger: listRef.current, start: 'top 82%' },
+      })
+    },
+    { scope: listRef },
+  )
+
   return (
     <section id="menu" className="relative overflow-hidden px-[clamp(20px,5vw,64px)] py-[clamp(90px,12vw,150px)]">
       {/* Full-bleed interior photo with warm forest-green gradient overlay */}
@@ -42,7 +66,7 @@ export default function Menu() {
         </Reveal>
 
         {/* Right — numbered category list */}
-        <Reveal delay={120} className="border-t border-white/15">
+        <div ref={listRef} className="border-t border-white/15">
           {menuCategories.map((cat, i) => {
             const num = String(i + 1).padStart(2, '0')
             const subtitle = cat.note || `e.g. ${cat.items[0].name}`
@@ -51,6 +75,7 @@ export default function Menu() {
               <a
                 key={cat.name}
                 href="#menu-all"
+                data-menu-item
                 className="group flex w-full items-center gap-[clamp(16px,3vw,40px)] border-b border-white/15 py-[clamp(18px,2.4vw,26px)] text-left transition-colors duration-200 hover:bg-white/5"
               >
                 <span className="w-7 flex-none font-mono text-[13px] font-medium text-lime-bright">
@@ -76,7 +101,7 @@ export default function Menu() {
               </a>
             )
           })}
-        </Reveal>
+        </div>
       </div>
     </section>
   )
