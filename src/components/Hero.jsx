@@ -23,14 +23,14 @@ export default function Hero() {
           scale: 1.45,
           yPercent: 28,
           ease: 'none',
-          scrollTrigger: { trigger: root.current, start: 'top top', end: 'bottom top', scrub: true },
+          scrollTrigger: { trigger: root.current, start: 'top top', end: 'bottom top', scrub: 1.2 },
         },
       )
       gsap.to('[data-hero-content]', {
         opacity: 0,
         y: -60,
         ease: 'none',
-        scrollTrigger: { trigger: root.current, start: 'center top', end: 'bottom top', scrub: true },
+        scrollTrigger: { trigger: root.current, start: 'center top', end: 'bottom top', scrub: 1 },
       })
     },
     { scope: root },
