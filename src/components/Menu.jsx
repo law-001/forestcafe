@@ -1,11 +1,7 @@
-import { useState } from 'react'
 import { menuCategories } from '../data'
 import { Reveal, Eyebrow, Icon } from './primitives'
-import MenuModal from './MenuModal'
 
 export default function Menu() {
-  const [open, setOpen] = useState(false)
-
   return (
     <section id="menu" className="relative overflow-hidden px-[clamp(20px,5vw,64px)] py-[clamp(90px,12vw,150px)]">
       {/* Background photo (from gallery) + gray overlay */}
@@ -34,16 +30,15 @@ export default function Menu() {
             Six categories, served open to close.
           </p>
 
-          <button
-            type="button"
-            onClick={() => setOpen(true)}
+          <a
+            href="#menu-all"
             className="group mt-9 inline-flex items-center gap-2.5 rounded-full bg-lime px-7 py-4 font-display text-[16px] font-semibold tracking-tight text-ink shadow-[0_14px_36px_rgba(244,136,43,0.32)] transition-transform duration-200 hover:-translate-y-1"
           >
             See the full menu
             <span className="transition-transform duration-200 group-hover:translate-x-1">
               <Icon name="arrow" />
             </span>
-          </button>
+          </a>
         </Reveal>
 
         {/* Right — numbered category list */}
@@ -53,10 +48,9 @@ export default function Menu() {
             const subtitle = cat.note || `e.g. ${cat.items[0].name}`
             const fromPrice = cat.items[0].price
             return (
-              <button
+              <a
                 key={cat.name}
-                type="button"
-                onClick={() => setOpen(true)}
+                href="#menu-all"
                 className="group flex w-full items-center gap-[clamp(16px,3vw,40px)] border-b border-lime/12 py-[clamp(18px,2.4vw,26px)] text-left transition-colors duration-200 hover:bg-white/[0.025]"
               >
                 <span className="w-7 flex-none font-mono text-[13px] font-medium text-lime">
@@ -79,13 +73,11 @@ export default function Menu() {
                 <span className="flex h-10 w-10 flex-none items-center justify-center rounded-full border border-lime/25 text-cream transition-all duration-200 group-hover:border-lime group-hover:bg-lime group-hover:text-ink">
                   <Icon name="arrow" size={18} />
                 </span>
-              </button>
+              </a>
             )
           })}
         </Reveal>
       </div>
-
-      {open && <MenuModal onClose={() => setOpen(false)} />}
     </section>
   )
 }

@@ -23,7 +23,7 @@ export default function Nav() {
     <>
       <div className="fixed inset-x-0 top-0 z-[150] flex justify-center px-4 pt-[clamp(14px,2.4vw,26px)]">
         <nav
-          className={`flex w-full max-w-5xl items-center justify-between gap-6 rounded-full border px-3 py-3 pl-5 transition-all duration-500 ${
+          className={`flex w-full max-w-5xl items-center justify-between gap-6 rounded-full border px-2.5 py-2 pl-4 transition-all duration-500 sm:px-3 sm:py-3 sm:pl-5 ${
             scrolled
               ? 'border-white/10 bg-ink/35 shadow-[0_18px_50px_rgba(0,0,0,0.45)] backdrop-blur-2xl'
               : 'border-white/5 bg-white/[0.015] backdrop-blur-lg'
@@ -63,7 +63,7 @@ export default function Nav() {
               type="button"
               onClick={() => setOpen(true)}
               aria-label="Open menu"
-              className="flex h-11 w-11 cursor-pointer flex-col items-center justify-center gap-[5px] rounded-full bg-white/5 md:hidden"
+              className="flex h-10 w-10 cursor-pointer flex-col items-center justify-center gap-[5px] rounded-full bg-white/5 md:hidden"
             >
               {[0, 1, 2].map((i) => (
                 <span key={i} className="block h-0.5 w-5 rounded-sm bg-cream" />
@@ -75,14 +75,14 @@ export default function Nav() {
 
       {open && (
         <div
-          className="fixed inset-0 z-[200] bg-ink/80 backdrop-blur-md md:hidden"
+          className="fc-overlay-in fixed inset-0 z-[200] bg-ink/40 backdrop-blur-sm md:hidden"
           onClick={() => setOpen(false)}
         >
           <div
-            className="absolute inset-y-0 right-0 flex w-[min(86vw,360px)] flex-col gap-1.5 border-l border-lime/10 bg-surface px-7 py-7 shadow-[-20px_0_60px_rgba(0,0,0,0.5)]"
+            className="fc-drawer-in absolute inset-y-0 right-0 flex w-[min(78vw,300px)] flex-col gap-0.5 border-l border-white/15 bg-white/[0.07] px-6 py-6 shadow-[-20px_0_60px_rgba(0,0,0,0.5)] backdrop-blur-2xl"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="mb-6 flex items-center justify-between">
+            <div className="mb-5 flex items-center justify-between">
               <img src="/assets/logo-transparent.png" alt="Forest Cafe" className="h-12" />
               <button
                 type="button"
@@ -98,7 +98,7 @@ export default function Nav() {
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="border-b border-white/5 px-1 py-4 font-display text-[22px] text-cream transition-colors hover:text-lime"
+                className="border-b border-white/5 px-1 py-3.5 font-display text-[18px] text-cream transition-colors hover:text-lime"
               >
                 {l.label}
               </a>
@@ -106,7 +106,7 @@ export default function Nav() {
             <a
               href="#reserve"
               onClick={() => setOpen(false)}
-              className="mt-6 rounded-full bg-lime px-4 py-4 text-center font-display text-[17px] font-semibold text-ink"
+              className="mt-5 rounded-full bg-lime px-4 py-3.5 text-center font-display text-[16px] font-semibold text-ink"
             >
               Reserve a Table
             </a>
