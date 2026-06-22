@@ -8,7 +8,7 @@ export default function Visit() {
 
   const Row = ({ icon, title, sub, href }) => (
     <div className="flex items-start gap-4">
-      <span className="hairline inline-flex h-12 w-12 flex-none items-center justify-center rounded-2xl bg-white/[0.03] text-lime">
+      <span className="hairline inline-flex h-12 w-12 flex-none items-center justify-center rounded-2xl bg-cream/5 text-lime">
         <Icon name={icon} size={20} />
       </span>
       <div>
@@ -33,7 +33,7 @@ export default function Visit() {
             Find us under the trees.
           </h2>
 
-          <div className="hairline mb-8 inline-flex gap-1 rounded-full bg-white/[0.03] p-1.5">
+          <div className="hairline mb-8 inline-flex gap-1 rounded-full bg-cream/5 p-1.5">
             {branches.map((b, idx) => (
               <button
                 key={b.tag}
@@ -41,8 +41,8 @@ export default function Visit() {
                 onClick={() => setActive(idx)}
                 className="cursor-pointer rounded-full border-0 px-5 py-2.5 font-display text-[14px] font-medium transition-colors duration-200"
                 style={{
-                  color: idx === active ? '#060d09' : '#aeb9af',
-                  background: idx === active ? '#f4882b' : 'transparent',
+                  color: idx === active ? '#ffffff' : '#4a6149',
+                  background: idx === active ? '#ea5d2a' : 'transparent',
                 }}
               >
                 {b.tag}
@@ -57,11 +57,11 @@ export default function Visit() {
           </div>
         </Reveal>
 
-        <Reveal delay={120} className="hairline overflow-hidden rounded-3xl shadow-[0_24px_60px_rgba(0,0,0,0.5)]">
+        <Reveal delay={120} className="hairline overflow-hidden rounded-3xl shadow-[0_18px_44px_rgba(20,48,28,0.12)]">
           <iframe
             title={`Map — ${branch.name}`}
             src={branch.map}
-            className="block h-[clamp(300px,38vw,440px)] w-full border-0 [filter:invert(0.92)_hue-rotate(180deg)_saturate(0.8)]"
+            className="block h-[clamp(300px,38vw,440px)] w-full border-0"
             loading="lazy"
           />
         </Reveal>

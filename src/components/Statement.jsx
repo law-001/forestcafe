@@ -45,7 +45,7 @@ export default function Statement() {
     >
       <div className="mx-auto max-w-5xl">
         <p className="mb-10 flex items-center gap-2.5 font-mono text-[12px] uppercase tracking-[0.32em] text-lime">
-          <span className="h-1.5 w-1.5 rounded-full bg-lime shadow-[0_0_12px_2px_rgba(244, 136, 43,0.7)]" />
+          <span className="h-1.5 w-1.5 rounded-full bg-lime shadow-[0_0_12px_2px_rgba(234,93,42,0.65)]" />
           The room
         </p>
         <p
@@ -63,7 +63,7 @@ export default function Statement() {
           ))}
         </p>
 
-        <div className="mt-[clamp(48px,7vw,88px)] grid grid-cols-2 gap-x-6 gap-y-9 border-t border-white/12 pt-[clamp(30px,3.5vw,44px)] sm:grid-cols-4">
+        <div className="mt-[clamp(48px,7vw,88px)] grid grid-cols-2 gap-x-6 gap-y-9 border-t border-cream/10 pt-[clamp(30px,3.5vw,44px)] sm:grid-cols-4">
           {INFO.map((it) => (
             <div key={it.value}>
               <p className="m-0 font-display text-[clamp(1.3rem,2.2vw,1.6rem)] font-semibold tracking-tight text-cream">

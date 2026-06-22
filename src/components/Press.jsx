@@ -4,7 +4,7 @@ import { Reveal, Eyebrow, Icon } from './primitives'
 
 const N = press.length
 const avatarBg = (i) =>
-  ['linear-gradient(135deg,#f4882b,#4d7c3a)', 'linear-gradient(135deg,#f2c679,#f4882b)', 'linear-gradient(135deg,#4d7c3a,#1f3d2b)'][
+  ['linear-gradient(135deg,#ea5d2a,#4f8f3a)', 'linear-gradient(135deg,#f2c679,#ea5d2a)', 'linear-gradient(135deg,#4f8f3a,#14301c)'][
     i % 3
   ]
 
@@ -44,7 +44,7 @@ export default function Press() {
           <div className="relative mt-9 flex items-center justify-between gap-4">
             <div className="flex items-center gap-3.5">
               <span
-                className="inline-flex h-12 w-12 items-center justify-center rounded-full font-display text-[18px] font-semibold text-ink"
+                className="inline-flex h-12 w-12 items-center justify-center rounded-full font-display text-[18px] font-semibold text-white"
                 style={{ background: avatarBg(i) }}
               >
                 {p.initial}
@@ -60,7 +60,7 @@ export default function Press() {
                 type="button"
                 onClick={() => go(i - 1)}
                 aria-label="Previous review"
-                className="hairline flex h-11 w-11 cursor-pointer items-center justify-center rounded-full bg-white/[0.03] text-cream transition-colors hover:bg-white/10"
+                className="hairline flex h-11 w-11 cursor-pointer items-center justify-center rounded-full bg-cream/5 text-cream transition-colors hover:bg-cream/10"
               >
                 <Icon name="chevLeft" />
               </button>
@@ -68,7 +68,7 @@ export default function Press() {
                 type="button"
                 onClick={() => go(i + 1)}
                 aria-label="Next review"
-                className="flex h-11 w-11 cursor-pointer items-center justify-center rounded-full bg-lime text-ink transition-transform hover:scale-105"
+                className="flex h-11 w-11 cursor-pointer items-center justify-center rounded-full bg-lime text-white transition-transform hover:scale-105"
               >
                 <Icon name="chevRight" />
               </button>
@@ -84,7 +84,7 @@ export default function Press() {
               onClick={() => go(n)}
               aria-label={`Go to review ${n + 1}`}
               className="h-2.5 cursor-pointer rounded-full border-0 p-0 transition-all duration-300"
-              style={{ width: n === i ? 30 : 10, background: n === i ? '#f4882b' : 'rgba(238,242,236,0.2)' }}
+              style={{ width: n === i ? 30 : 10, background: n === i ? '#ea5d2a' : 'rgba(20,48,28,0.18)' }}
             />
           ))}
           <span className="ml-3 font-mono text-[12px] text-mist-dim">Placeholder reviews — replace with real quotes.</span>

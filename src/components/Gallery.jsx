@@ -77,12 +77,12 @@ export default function Gallery() {
               alt={g.alt}
               className="h-full w-full object-cover transition-transform duration-[900ms] ease-out group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_55%,rgba(6,13,9,0.8))]" />
+            <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_55%,rgba(20,48,28,0.82))]" />
             <figcaption className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-3 p-6">
-              <span className="max-w-[14rem] font-body text-[14px] leading-snug text-cream/90">
+              <span className="max-w-[14rem] font-body text-[14px] leading-snug text-white/90">
                 {g.alt}
               </span>
-              <span className="font-mono text-[12px] text-lime">
+              <span className="font-mono text-[12px] text-lime-bright">
                 {String(i + 1).padStart(2, '0')} / {String(gallery.length).padStart(2, '0')}
               </span>
             </figcaption>

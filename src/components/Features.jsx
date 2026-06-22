@@ -25,12 +25,12 @@ export default function Features() {
               alt="Indoor trees rising to the ceiling with woven lanterns"
               className="h-full min-h-[18rem] w-full object-cover transition-transform duration-[900ms] ease-out group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_30%,rgba(6,13,9,0.85))]" />
+            <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_30%,rgba(20,48,28,0.88))]" />
             <div className="absolute inset-x-0 bottom-0 p-7">
-              <h3 className="m-0 font-display text-[clamp(1.5rem,2.4vw,2rem)] font-semibold text-cream">
+              <h3 className="m-0 font-display text-[clamp(1.5rem,2.4vw,2rem)] font-semibold text-white">
                 Real-feel forest
               </h3>
-              <p className="m-0 mt-2 max-w-sm text-[15px] leading-relaxed text-mist">
+              <p className="m-0 mt-2 max-w-sm text-[15px] leading-relaxed text-white/80">
                 Floor-to-ceiling trees, a living moss wall, and rattan lanterns that glow warm
                 overhead. It feels like a forest because it nearly is one.
               </p>
@@ -88,12 +88,12 @@ export default function Features() {
               alt="Preserved-moss feature wall with Forest Cafe signage"
               className="h-full min-h-[12rem] w-full object-cover transition-transform duration-[900ms] ease-out group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,13,9,0.7),transparent_60%)]" />
+            <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(20,48,28,0.78),transparent_60%)]" />
             <div className="absolute inset-y-0 left-0 flex flex-col justify-center p-7">
-              <p className="m-0 font-display text-[clamp(1.2rem,2vw,1.6rem)] font-semibold text-cream">
+              <p className="m-0 font-display text-[clamp(1.2rem,2vw,1.6rem)] font-semibold text-white">
                 A wall of living moss
               </p>
-              <p className="m-0 mt-1.5 max-w-[16rem] text-[14px] text-mist">
+              <p className="m-0 mt-1.5 max-w-[16rem] text-[14px] text-white/80">
                 Preserved, hushing the room and keeping the air soft.
               </p>
             </div>
@@ -106,12 +106,12 @@ export default function Features() {
               alt="Curved olive banquette seating from above"
               className="h-full min-h-[12rem] w-full object-cover transition-transform duration-[900ms] ease-out group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent_40%,rgba(6,13,9,0.7))]" />
+            <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent_40%,rgba(20,48,28,0.78))]" />
             <div className="absolute inset-y-0 right-0 flex flex-col items-end justify-center p-7 text-right">
-              <p className="m-0 font-display text-[clamp(1.2rem,2vw,1.6rem)] font-semibold text-cream">
+              <p className="m-0 font-display text-[clamp(1.2rem,2vw,1.6rem)] font-semibold text-white">
                 Curved olive banquettes
               </p>
-              <p className="m-0 mt-1.5 max-w-[15rem] text-[14px] text-mist">
+              <p className="m-0 mt-1.5 max-w-[15rem] text-[14px] text-white/80">
                 Soft corners to settle into for hours.
               </p>
             </div>

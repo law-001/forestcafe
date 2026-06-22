@@ -13,7 +13,7 @@ export default function MenuPage() {
     <main className="relative w-full max-w-full overflow-x-hidden">
       {/* Slim top bar */}
       <div className="fixed inset-x-0 top-0 z-[150] flex justify-center px-4 pt-[clamp(14px,2.4vw,26px)]">
-        <nav className="flex w-full max-w-5xl items-center justify-between gap-6 rounded-full border border-white/10 bg-ink/45 px-2.5 py-2 pl-4 shadow-[0_18px_50px_rgba(0,0,0,0.45)] backdrop-blur-2xl sm:px-3 sm:py-3 sm:pl-5">
+        <nav className="flex w-full max-w-5xl items-center justify-between gap-6 rounded-full border border-cream/10 bg-white/75 px-2.5 py-2 pl-4 shadow-[0_14px_38px_rgba(20,48,28,0.10)] backdrop-blur-2xl sm:px-3 sm:py-3 sm:pl-5">
           <a
             href="#menu"
             className="flex flex-none items-center gap-2 rounded-full px-3 py-1.5 font-body text-[14px] text-mist transition-colors hover:text-cream"
@@ -29,7 +29,7 @@ export default function MenuPage() {
           </a>
           <a
             href="#reserve"
-            className="inline-flex items-center justify-center rounded-full bg-lime px-5 py-2.5 font-display text-[14px] font-semibold tracking-tight text-ink shadow-[0_10px_26px_rgba(244,136,43,0.28)] transition-transform duration-200 hover:-translate-y-0.5"
+            className="inline-flex items-center justify-center rounded-full bg-lime px-5 py-2.5 font-display text-[14px] font-semibold tracking-tight text-white shadow-[0_10px_26px_rgba(234,93,42,0.28)] transition-transform duration-200 hover:-translate-y-0.5"
           >
             Reserve
           </a>
@@ -46,17 +46,17 @@ export default function MenuPage() {
         />
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(38,40,38,0.7),rgba(20,22,20,0.92))]"
+          className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(20,48,28,0.55),rgba(20,48,28,0.92))]"
         />
         <div className="relative mx-auto w-full max-w-6xl">
-          <span className="mb-4 inline-flex items-center gap-2.5 font-mono text-[12px] uppercase tracking-[0.32em] text-lime">
-            <span className="h-1.5 w-1.5 rounded-full bg-lime shadow-[0_0_12px_2px_rgba(244,136,43,0.7)]" />
+          <span className="mb-4 inline-flex items-center gap-2.5 font-mono text-[12px] uppercase tracking-[0.32em] text-lime-bright">
+            <span className="h-1.5 w-1.5 rounded-full bg-lime shadow-[0_0_12px_2px_rgba(234,93,42,0.65)]" />
             Open to close
           </span>
-          <h1 className="m-0 max-w-3xl font-display text-[clamp(2.4rem,6vw,4.5rem)] font-semibold leading-[1.02] tracking-[-0.03em] text-cream">
+          <h1 className="m-0 max-w-3xl font-display text-[clamp(2.4rem,6vw,4.5rem)] font-semibold leading-[1.02] tracking-[-0.03em] text-white">
             Our full <span className="text-canopy">menu</span>
           </h1>
-          <p className="m-0 mt-5 max-w-xl text-[clamp(1rem,1.6vw,1.15rem)] leading-relaxed text-mist">
+          <p className="m-0 mt-5 max-w-xl text-[clamp(1rem,1.6vw,1.15rem)] leading-relaxed text-white/80">
             All-day breakfast, hearty rice meals, fresh pasta and a coffee bar built for lingering.
           </p>
         </div>
@@ -94,16 +94,16 @@ export default function MenuPage() {
                       decoding="async"
                       className="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                     />
-                    <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,transparent_55%,rgba(15,27,19,0.6))] transition-opacity duration-300 group-hover:opacity-0" />
+                    <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,transparent_55%,rgba(20,48,28,0.7))] transition-opacity duration-300 group-hover:opacity-0" />
                     {j === 0 && (
-                      <span className="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-ink/70 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.12em] text-lime backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-0">
+                      <span className="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-pine/80 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.12em] text-amber backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-0">
                         <Icon name="star" size={11} />
                         Favourite
                       </span>
                     )}
                     {/* Description reveal on hover */}
-                    <div className="pointer-events-none absolute inset-0 flex items-end bg-ink/85 p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                      <p className="m-0 translate-y-2 text-[13.5px] leading-relaxed text-cream/90 transition-transform duration-300 group-hover:translate-y-0">
+                    <div className="pointer-events-none absolute inset-0 flex items-end bg-pine/90 p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                      <p className="m-0 translate-y-2 text-[13.5px] leading-relaxed text-white/90 transition-transform duration-300 group-hover:translate-y-0">
                         {item.desc}
                       </p>
                     </div>
@@ -132,7 +132,7 @@ export default function MenuPage() {
           </p>
           <a
             href="#reserve"
-            className="group inline-flex items-center gap-2.5 rounded-full bg-lime px-7 py-4 font-display text-[16px] font-semibold tracking-tight text-ink shadow-[0_14px_36px_rgba(244,136,43,0.32)] transition-transform duration-200 hover:-translate-y-1"
+            className="group inline-flex items-center gap-2.5 rounded-full bg-lime px-7 py-4 font-display text-[16px] font-semibold tracking-tight text-white shadow-[0_14px_36px_rgba(234,93,42,0.32)] transition-transform duration-200 hover:-translate-y-1"
           >
             Reserve a table
             <span className="transition-transform duration-200 group-hover:translate-x-1">

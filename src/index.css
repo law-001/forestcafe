@@ -1,31 +1,37 @@
 @import 'tailwindcss';
 
 /* ----------------------------------------------------------------------------
-   Forest Cafe — dark "canopy after dark" design system
-   Near-black forest ink, lime accent, warm lantern amber, grain + mesh light
+   Forest Cafe — bright daylight design system
+   Cream base, fresh leaf-green accents, vibrant tangerine CTAs.
+   Token names retained for compatibility; semantic intent below.
+     bg-ink / bg-ink-2 / bg-surface / bg-surface-2  → light cream surfaces
+     text-cream                                     → dark forest text
+     text-mist / text-mist-dim                      → muted sage text
+     bg-lime / bg-ember                             → tangerine (CTA)
+     bg-moss / bg-pine                              → fresh green / deep brand green
 ---------------------------------------------------------------------------- */
 @theme {
-  --color-ink: #060d09;        /* page base — near-black forest */
-  --color-ink-2: #0a140e;      /* alt section surface */
-  --color-surface: #0f1b13;    /* card base */
-  --color-surface-2: #15241a;  /* raised card */
-  --color-pine: #1f3d2b;       /* deep brand green */
-  --color-moss: #4d7c3a;       /* foliage mid */
-  --color-lime: #f4882b;       /* primary accent (warm orange) */
-  --color-lime-bright: #ffb066;/* hover / highlight (light orange) */
-  --color-ember: #f4882b;      /* warm CTA glow */
+  --color-ink: #f6f1e3;        /* page base — warm cream */
+  --color-ink-2: #efe9d6;      /* alt section surface */
+  --color-surface: #ffffff;    /* card base */
+  --color-surface-2: #f4eedb;  /* raised / hover card */
+  --color-pine: #14301c;       /* deep brand green (text on cream) */
+  --color-moss: #4f8f3a;       /* fresh leaf green */
+  --color-lime: #ea5d2a;       /* primary accent — vibrant tangerine */
+  --color-lime-bright: #ff7a45;/* hover / highlight (lighter tangerine) */
+  --color-ember: #ea5d2a;      /* warm CTA glow */
   --color-amber: #f2c679;      /* lantern light */
-  --color-cream: #eef2ec;      /* primary text on dark */
-  --color-mist: #aeb9af;       /* secondary text */
-  --color-mist-dim: #6f7d72;   /* tertiary / captions */
+  --color-cream: #14301c;      /* primary text — dark forest on cream */
+  --color-mist: #4a6149;       /* secondary text — sage */
+  --color-mist-dim: #7d8f7d;   /* tertiary / captions */
 
   --font-display: 'Outfit', system-ui, sans-serif;
   --font-body: 'Geist', system-ui, sans-serif;
   --font-mono: 'Geist Mono', ui-monospace, monospace;
 
   --ease-out-soft: cubic-bezier(0.22, 0.68, 0.18, 1);
-  --shadow-card: 0 24px 60px rgba(0, 0, 0, 0.5);
-  --shadow-glow: 0 18px 50px rgba(244, 136, 43, 0.18);
+  --shadow-card: 0 24px 60px rgba(20, 48, 28, 0.12);
+  --shadow-glow: 0 18px 50px rgba(234, 93, 42, 0.22);
 }
 
 @layer base {
@@ -42,7 +48,7 @@
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
   }
-  /* ambient mesh + grain over the base ink */
+  /* soft daylight wash — subtle warm/leafy tints, no dark splotches */
   body::before {
     content: '';
     position: fixed;
@@ -50,9 +56,9 @@
     z-index: 0;
     pointer-events: none;
     background:
-      radial-gradient(60% 50% at 18% 8%, rgba(77, 124, 58, 0.16), transparent 60%),
-      radial-gradient(50% 45% at 85% 4%, rgba(242, 198, 121, 0.1), transparent 55%),
-      radial-gradient(55% 60% at 90% 92%, rgba(244, 136, 43, 0.07), transparent 60%);
+      radial-gradient(60% 50% at 18% 8%, rgba(79, 143, 58, 0.10), transparent 60%),
+      radial-gradient(50% 45% at 85% 4%, rgba(234, 93, 42, 0.06), transparent 55%),
+      radial-gradient(55% 60% at 90% 92%, rgba(242, 198, 121, 0.10), transparent 60%);
   }
   body::after {
     content: '';
@@ -60,37 +66,37 @@
     inset: 0;
     z-index: 0;
     pointer-events: none;
-    opacity: 0.4;
-    mix-blend-mode: overlay;
+    opacity: 0.06;
+    mix-blend-mode: multiply;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
   }
   #root { position: relative; z-index: 1; }
   img { display: block; max-width: 100%; }
   a { color: inherit; text-decoration: none; }
-  ::selection { background: var(--color-lime); color: var(--color-ink); }
+  ::selection { background: var(--color-lime); color: #ffffff; }
   :focus-visible {
     outline: 2px solid var(--color-lime);
     outline-offset: 3px;
   }
 }
 
-/* lime-to-amber gradient text for accent words */
+/* tangerine-to-amber gradient text for accent words */
 .text-canopy {
   display: inline-block;
   padding-bottom: 0.1em;
-  background: linear-gradient(104deg, #ffb066, #f4882b 38%, #f2c679);
+  background: linear-gradient(104deg, #ff7a45, #ea5d2a 38%, #d44a18);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
-/* fine hairline used across cards / nav */
-.hairline { border: 1px solid rgba(244, 136, 43, 0.12); }
+/* fine hairline used across cards / nav (dark forest at low alpha) */
+.hairline { border: 1px solid rgba(20, 48, 28, 0.10); }
 
 /* slim themed scrollbar for the menu modal scroll areas */
 .fc-scroll {
   scrollbar-width: thin;
-  scrollbar-color: rgba(244, 136, 43, 0.35) transparent;
+  scrollbar-color: rgba(234, 93, 42, 0.45) transparent;
 }
 .fc-scroll::-webkit-scrollbar {
   width: 8px;
@@ -100,11 +106,11 @@
   background: transparent;
 }
 .fc-scroll::-webkit-scrollbar-thumb {
-  background: rgba(244, 136, 43, 0.3);
+  background: rgba(234, 93, 42, 0.4);
   border-radius: 999px;
 }
 .fc-scroll::-webkit-scrollbar-thumb:hover {
-  background: rgba(244, 136, 43, 0.55);
+  background: rgba(234, 93, 42, 0.65);
 }
 
 /* infinite marquee */

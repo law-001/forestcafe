@@ -28,7 +28,7 @@ export default function App() {
 
   return (
     <main className="relative w-full max-w-full overflow-x-hidden">
-      <Nav />
+      {/* <Nav /> — temporarily hidden, file kept for re-enable */}
       <Hero />
       <Marquee />
       <Statement />

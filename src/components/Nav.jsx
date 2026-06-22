@@ -25,15 +25,15 @@ export default function Nav() {
         <nav
           className={`flex w-full max-w-5xl items-center justify-between gap-6 rounded-full border px-2.5 py-2 pl-4 transition-all duration-500 sm:px-3 sm:py-3 sm:pl-5 ${
             scrolled
-              ? 'border-white/10 bg-ink/35 shadow-[0_18px_50px_rgba(0,0,0,0.45)] backdrop-blur-2xl'
-              : 'border-white/5 bg-white/[0.015] backdrop-blur-lg'
+              ? 'border-cream/10 bg-white/75 shadow-[0_14px_38px_rgba(20,48,28,0.10)] backdrop-blur-2xl'
+              : 'border-cream/5 bg-white/40 backdrop-blur-lg'
           }`}
         >
           <a href="#hero" className="flex flex-none items-center gap-2.5" aria-label="Forest Cafe — home">
             <img
               src="/assets/logo-transparent.png"
               alt="Forest Cafe PH Arena"
-              className="h-9 w-auto drop-shadow-[0_4px_12px_rgba(0,0,0,0.45)]"
+              className="h-9 w-auto drop-shadow-[0_4px_10px_rgba(20,48,28,0.18)]"
             />
             <span className="hidden font-display text-[15px] font-semibold tracking-tight text-cream sm:block">
               Forest Cafe
@@ -45,7 +45,7 @@ export default function Nav() {
               <a
                 key={l.href}
                 href={l.href}
-                className="rounded-full px-4 py-2 font-body text-[14px] text-mist transition-colors duration-200 hover:bg-white/5 hover:text-cream"
+                className="rounded-full px-4 py-2 font-body text-[14px] text-mist transition-colors duration-200 hover:bg-cream/5 hover:text-cream"
               >
                 {l.label}
               </a>
@@ -55,7 +55,7 @@ export default function Nav() {
           <div className="flex items-center gap-2">
             <a
               href="#reserve"
-              className="hidden items-center justify-center rounded-full bg-lime px-5 py-2.5 font-display text-[14px] font-semibold tracking-tight text-ink shadow-[0_10px_26px_rgba(244, 136, 43,0.28)] transition-transform duration-200 hover:-translate-y-0.5 md:inline-flex"
+              className="hidden items-center justify-center rounded-full bg-lime px-5 py-2.5 font-display text-[14px] font-semibold tracking-tight text-white shadow-[0_10px_26px_rgba(234,93,42,0.28)] transition-transform duration-200 hover:-translate-y-0.5 md:inline-flex"
             >
               Reserve
             </a>
@@ -63,7 +63,7 @@ export default function Nav() {
               type="button"
               onClick={() => setOpen(true)}
               aria-label="Open menu"
-              className="flex h-10 w-10 cursor-pointer flex-col items-center justify-center gap-[5px] rounded-full bg-white/5 md:hidden"
+              className="flex h-10 w-10 cursor-pointer flex-col items-center justify-center gap-[5px] rounded-full bg-cream/5 md:hidden"
             >
               {[0, 1, 2].map((i) => (
                 <span key={i} className="block h-0.5 w-5 rounded-sm bg-cream" />
@@ -75,11 +75,11 @@ export default function Nav() {
 
       {open && (
         <div
-          className="fc-overlay-in fixed inset-0 z-[200] bg-ink/40 backdrop-blur-sm md:hidden"
+          className="fc-overlay-in fixed inset-0 z-[200] bg-pine/35 backdrop-blur-sm md:hidden"
           onClick={() => setOpen(false)}
         >
           <div
-            className="fc-drawer-in absolute inset-y-0 right-0 flex w-[min(78vw,300px)] flex-col gap-0.5 border-l border-white/15 bg-white/[0.07] px-6 py-6 shadow-[-20px_0_60px_rgba(0,0,0,0.5)] backdrop-blur-2xl"
+            className="fc-drawer-in absolute inset-y-0 right-0 flex w-[min(78vw,300px)] flex-col gap-0.5 border-l border-cream/10 bg-ink/95 px-6 py-6 shadow-[-20px_0_60px_rgba(20,48,28,0.18)] backdrop-blur-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="mb-5 flex items-center justify-between">
@@ -88,7 +88,7 @@ export default function Nav() {
                 type="button"
                 onClick={() => setOpen(false)}
                 aria-label="Close menu"
-                className="cursor-pointer rounded-full bg-white/5 px-3 font-display text-[28px] leading-none text-cream"
+                className="cursor-pointer rounded-full bg-cream/5 px-3 font-display text-[28px] leading-none text-cream"
               >
                 &times;
               </button>
@@ -98,7 +98,7 @@ export default function Nav() {
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="border-b border-white/5 px-1 py-3.5 font-display text-[18px] text-cream transition-colors hover:text-lime"
+                className="border-b border-cream/10 px-1 py-3.5 font-display text-[18px] text-cream transition-colors hover:text-lime"
               >
                 {l.label}
               </a>
@@ -106,7 +106,7 @@ export default function Nav() {
             <a
               href="#reserve"
               onClick={() => setOpen(false)}
-              className="mt-5 rounded-full bg-lime px-4 py-3.5 text-center font-display text-[16px] font-semibold text-ink"
+              className="mt-5 rounded-full bg-lime px-4 py-3.5 text-center font-display text-[16px] font-semibold text-white"
             >
               Reserve a Table
             </a>

@@ -36,7 +36,7 @@ export const features = [
 export const branches = [
   {
     tag: 'Main Branch',
-    tagBg: '#1F3D2B',
+    tagBg: '#14301c',
     placeholder: false,
     img: '/assets/facade-night.jpg',
     name: 'Forest Cafe PH Arena',
@@ -50,7 +50,7 @@ export const branches = [
   },
   {
     tag: 'Second Branch',
-    tagBg: '#9a5a2a',
+    tagBg: '#ea5d2a',
     placeholder: true,
     img: '/assets/interior-wide.jpg',
     name: '[ Branch 2 Name — placeholder ]',

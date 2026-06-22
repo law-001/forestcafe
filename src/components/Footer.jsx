@@ -3,7 +3,7 @@ import { Icon } from './primitives'
 
 export default function Footer() {
   return (
-    <footer className="border-t border-lime/10 bg-ink px-[clamp(20px,5vw,64px)] pb-10 pt-[clamp(56px,8vw,90px)]">
+    <footer className="border-t border-lime/15 bg-ink px-[clamp(20px,5vw,64px)] pb-10 pt-[clamp(56px,8vw,90px)]">
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-[clamp(32px,5vw,56px)] md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
           <img src="/assets/logo-transparent.png" alt="Forest Cafe PH Arena" className="mb-5 w-[180px]" />
@@ -45,14 +45,14 @@ export default function Footer() {
               <a
                 href="#"
                 aria-label="Facebook"
-                className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/[0.05] text-cream transition-colors hover:bg-lime hover:text-ink"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-cream/8 text-cream transition-colors hover:bg-lime hover:text-white"
               >
                 <Icon name="facebook" />
               </a>
               <a
                 href="#"
                 aria-label="Instagram"
-                className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/[0.05] text-cream transition-colors hover:bg-lime hover:text-ink"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-cream/8 text-cream transition-colors hover:bg-lime hover:text-white"
               >
                 <Icon name="instagram" />
               </a>
@@ -61,7 +61,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="mx-auto mt-[clamp(40px,5vw,56px)] flex max-w-6xl flex-wrap justify-between gap-2.5 border-t border-white/5 pt-6 font-mono text-[12px] text-mist-dim">
+      <div className="mx-auto mt-[clamp(40px,5vw,56px)] flex max-w-6xl flex-wrap justify-between gap-2.5 border-t border-cream/10 pt-6 font-mono text-[12px] text-mist-dim">
         <span>© 2026 Forest Cafe PH Arena. All rights reserved.</span>
         <span>Made for the canopy.</span>
       </div>

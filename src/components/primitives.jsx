@@ -129,7 +129,7 @@ export const Eyebrow = ({ children, className = '' }) => (
   <span
     className={`mb-5 inline-flex items-center gap-2.5 font-mono text-[12px] uppercase tracking-[0.32em] text-lime ${className}`}
   >
-    <span className="h-1.5 w-1.5 rounded-full bg-lime shadow-[0_0_12px_2px_rgba(244, 136, 43,0.7)]" />
+    <span className="h-1.5 w-1.5 rounded-full bg-lime shadow-[0_0_12px_2px_rgba(234,93,42,0.65)]" />
     {children}
   </span>
 )
