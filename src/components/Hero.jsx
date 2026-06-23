@@ -13,7 +13,6 @@ export default function Hero() {
       tl.from('[data-hero-line]', { yPercent: 120, opacity: 0, duration: 1.1, stagger: 0.12 }, 0.15)
         .from('[data-hero-sub]', { y: 24, opacity: 0, duration: 0.9 }, '-=0.6')
         .from('[data-hero-cta]', { opacity: 0, duration: 0.7, stagger: 0.1 }, '-=0.5')
-        .from('[data-hero-cue]', { opacity: 0, duration: 0.8 }, '-=0.3')
 
       // background drift + zoom as the hero leaves
       gsap.fromTo(
@@ -84,27 +83,20 @@ export default function Hero() {
           <a
             data-hero-cta
             href="#reserve"
-            className="inline-flex h-14 items-center justify-center rounded-full bg-lime px-8 font-display text-[16px] font-semibold tracking-tight text-white shadow-[0_6px_14px_rgba(20,48,28,0.28)] transition-transform duration-200 hover:-translate-y-1"
+            className="inline-flex h-11 items-center justify-center rounded-full bg-lime px-6 font-display text-[14px] font-semibold tracking-tight text-white shadow-[0_6px_14px_rgba(20,48,28,0.28)] transition-transform duration-200 hover:-translate-y-1 sm:h-14 sm:px-8 sm:text-[16px]"
           >
             Reserve a Table
           </a>
           <a
             data-hero-cta
             href="#menu"
-            className="inline-flex h-14 items-center justify-center rounded-full border border-white/30 bg-white/15 px-8 font-display text-[16px] font-medium text-white backdrop-blur-md transition-colors duration-200 hover:border-white/60 hover:bg-white/25"
+            className="inline-flex h-11 items-center justify-center rounded-full border border-white/30 bg-white/15 px-6 font-display text-[14px] font-medium text-white backdrop-blur-md transition-colors duration-200 hover:border-white/60 hover:bg-white/25 sm:h-14 sm:px-8 sm:text-[16px]"
           >
             View the Menu
           </a>
         </div>
       </div>
 
-      <div
-        data-hero-cue
-        className="absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-2 text-white/70"
-      >
-        <span className="font-mono text-[11px] uppercase tracking-[0.3em]">Scroll</span>
-        <span className="h-9 w-px bg-[linear-gradient(#ea5d2a,transparent)]" />
-      </div>
     </header>
   )
 }

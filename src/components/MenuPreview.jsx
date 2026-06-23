@@ -210,30 +210,6 @@ export default function MenuPreview() {
             {/* trailing spacer so the last card can fully snap-center */}
             <div aria-hidden className="w-px shrink-0" />
           </div>
-
-          {/* Live swipe hint — animated indicator + caption */}
-          <div className="mt-6 flex flex-col items-center gap-2.5">
-            <div
-              aria-hidden
-              className="fc-swipe-track relative h-5 w-20 text-lime"
-            >
-              <svg
-                className="fc-swipe-icon absolute top-1/2 h-5 w-5 -translate-y-1/2"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M5 12h14" />
-                <path d="M13 6l6 6-6 6" />
-              </svg>
-            </div>
-            <p className="m-0 font-mono text-[11px] uppercase tracking-[0.24em] text-pine/55">
-              Swipe to view menu
-            </p>
-          </div>
         </div>
 
         {/* ───── Footer link ───── */}
@@ -275,22 +251,8 @@ export default function MenuPreview() {
         .fc-swipe { -webkit-overflow-scrolling: touch; scrollbar-width: none; }
         .fc-swipe::-webkit-scrollbar { display: none; }
 
-        /* live swipe hint — arrow drifts across the track with a soft fade */
-        .fc-swipe-icon {
-          left: 0;
-          animation: fcSwipeHint 1.9s cubic-bezier(0.45, 0.05, 0.25, 1) infinite;
-        }
-        @keyframes fcSwipeHint {
-          0%   { left: 0;            opacity: 0;   transform: translate(-4px, -50%); }
-          18%  { opacity: 1; }
-          50%  { left: calc(100% - 1.25rem); opacity: 1; transform: translate(0, -50%); }
-          82%  { opacity: 1; }
-          100% { left: calc(100% - 1.25rem); opacity: 0; transform: translate(4px, -50%); }
-        }
-
         @media (prefers-reduced-motion: reduce) {
           .fc-line .fc-arch { animation: none; }
-          .fc-swipe-icon { animation: none; left: calc(50% - 0.625rem); opacity: 0.6; }
         }
       `}</style>
     </section>

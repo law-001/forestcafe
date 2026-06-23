@@ -30,16 +30,16 @@ export default function Reserve() {
         <div className="mt-11 flex flex-wrap justify-center gap-4">
           <a
             href="tel:+639659470077"
-            className="inline-flex items-center gap-3 rounded-full bg-lime px-9 py-5 font-display text-[clamp(1rem,2vw,1.2rem)] font-semibold text-white shadow-[0_18px_44px_rgba(234,93,42,0.32)] transition-transform duration-200 hover:-translate-y-1"
+            className="inline-flex items-center gap-2.5 rounded-full bg-lime px-6 py-3.5 font-display text-[14px] font-semibold text-white shadow-[0_18px_44px_rgba(234,93,42,0.32)] transition-transform duration-200 hover:-translate-y-1 sm:gap-3 sm:px-9 sm:py-5 sm:text-[clamp(1rem,2vw,1.2rem)]"
           >
-            <Icon name="phone" size={19} />
+            <Icon name="phone" size={16} />
             +63 965 947 0077
           </a>
           <a
             href="mailto:forestcafepharena@gmail.com"
-            className="inline-flex items-center gap-3 rounded-full border border-white/30 bg-white/10 px-9 py-5 font-display text-[clamp(0.95rem,2vw,1.1rem)] font-medium text-white backdrop-blur-sm transition-colors duration-200 hover:border-white/60 hover:bg-white/20"
+            className="inline-flex items-center gap-2.5 rounded-full border border-white/30 bg-white/10 px-6 py-3.5 font-display text-[13px] font-medium text-white backdrop-blur-sm transition-colors duration-200 hover:border-white/60 hover:bg-white/20 sm:gap-3 sm:px-9 sm:py-5 sm:text-[clamp(0.95rem,2vw,1.1rem)]"
           >
-            <Icon name="mail" size={19} />
+            <Icon name="mail" size={16} />
             forestcafepharena@gmail.com
           </a>
         </div>

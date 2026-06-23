@@ -364,16 +364,23 @@ export default function LeafDivider({ variant = 'spring' }) {
 
       if (decor?.length) {
         gsap.set(decor, { transformOrigin: '0px 0px' })
+        // Bloom is scroll-linked: scrolling down opens the canopy, scrolling
+        // up tucks it back. Stagger inside a scrubbed tween spreads each
+        // decoration across the scroll window so they unfurl one by one.
         gsap.fromTo(
           decor,
           { opacity: 0, scale: 0.4 },
           {
             opacity: 1,
             scale: 1,
-            duration: 0.85,
-            stagger: { each: 0.022, from: 'random' },
             ease: 'back.out(1.6)',
-            scrollTrigger: { trigger: root.current, start: 'top 88%' },
+            stagger: { each: 0.04, from: 'random' },
+            scrollTrigger: {
+              trigger: root.current,
+              start: 'top 92%',
+              end: 'bottom 45%',
+              scrub: 0.6,
+            },
           },
         )
 
