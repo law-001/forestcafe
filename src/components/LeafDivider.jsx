@@ -376,14 +376,39 @@ export default function LeafDivider({ variant = 'spring' }) {
             scrollTrigger: { trigger: root.current, start: 'top 88%' },
           },
         )
-        decor.forEach((d, i) => {
+
+        // Leaves: full through-center sway with per-leaf amplitude, period,
+        // and phase so the canopy breathes instead of marching in step.
+        const leaves = root.current?.querySelectorAll('[data-leaf]')
+        leaves?.forEach((leaf, i) => {
+          const amp = 6 + (i % 5) * 1.6
+          const period = 2.6 + (i % 7) * 0.4
+          const phase = (i % 11) * 0.22
+          gsap.fromTo(
+            leaf,
+            { rotation: -amp * 0.7 },
+            {
+              rotation: amp,
+              duration: period,
+              yoyo: true,
+              repeat: -1,
+              ease: 'sine.inOut',
+              delay: phase,
+            },
+          )
+        })
+
+        // Buds, berries, mushrooms, birds: keep a quieter drift so they feel
+        // alive without competing with the leaf canopy.
+        const others = root.current?.querySelectorAll('[data-decor]:not([data-leaf])')
+        others?.forEach((d, i) => {
           gsap.to(d, {
-            rotation: i % 2 === 0 ? 4 : -4,
-            duration: 2.4 + (i % 5) * 0.35,
+            rotation: i % 2 === 0 ? 3 : -3,
+            duration: 3.2 + (i % 4) * 0.4,
             yoyo: true,
             repeat: -1,
             ease: 'sine.inOut',
-            delay: (i % 7) * 0.18,
+            delay: (i % 5) * 0.2,
           })
         })
       }
@@ -458,7 +483,7 @@ export default function LeafDivider({ variant = 'spring' }) {
         {/* leaves — each is two-wrapped: outer = position+orient, inner = GSAP target */}
         {data.leaves.map((l, i) => (
           <g key={`l${i}`} transform={`translate(${l.x} ${l.y}) rotate(${l.rot})`}>
-            <g data-decor>
+            <g data-decor data-leaf>
               <Leaf size={l.size} fill={l.color} edge={l.edge} />
             </g>
           </g>
