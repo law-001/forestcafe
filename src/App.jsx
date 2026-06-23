@@ -4,6 +4,7 @@ import Hero from './components/Hero'
 import Marquee from './components/Marquee'
 import Statement from './components/Statement'
 import Features from './components/Features'
+import MenuPreview from './components/MenuPreview'
 import Menu from './components/Menu'
 import Gallery from './components/Gallery'
 import Branches from './components/Branches'
@@ -12,6 +13,7 @@ import Visit from './components/Visit'
 import Reserve from './components/Reserve'
 import Footer from './components/Footer'
 import MenuPage from './components/MenuPage'
+import LeafDivider from './components/LeafDivider'
 
 export default function App() {
   const [route, setRoute] = useState(() => window.location.hash)
@@ -32,10 +34,14 @@ export default function App() {
       <Hero />
       <Marquee />
       <Features />
+      <LeafDivider variant="autumn" />
+      <MenuPreview />
       <Menu />
       <Gallery />
       <Branches />
+      <LeafDivider variant="spring" />
       <Press />
+      <LeafDivider variant="autumn" />
       <Visit />
       <Reserve />
       <Footer />
