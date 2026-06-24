@@ -17,19 +17,35 @@ export default function Hero() {
       // background drift + zoom as the hero leaves
       gsap.fromTo(
         bg.current,
-        { scale: 1.05, yPercent: 0 },
+        { scale: 1.05, yPercent: 0, force3D: true, transformOrigin: '50% 50%' },
         {
           scale: 1.45,
           yPercent: 28,
           ease: 'none',
-          scrollTrigger: { trigger: root.current, start: 'top top', end: 'bottom top', scrub: 1.2 },
+          force3D: true,
+          transformOrigin: '50% 50%',
+          scrollTrigger: {
+            trigger: root.current,
+            start: 'top top',
+            end: 'bottom top',
+            scrub: 1.5,
+            invalidateOnRefresh: true,
+            fastScrollEnd: true,
+          },
         },
       )
       gsap.to('[data-hero-content]', {
         opacity: 0,
         y: -60,
         ease: 'none',
-        scrollTrigger: { trigger: root.current, start: 'center top', end: 'bottom top', scrub: 1 },
+        force3D: true,
+        scrollTrigger: {
+          trigger: root.current,
+          start: 'center top',
+          end: 'bottom top',
+          scrub: 1.5,
+          invalidateOnRefresh: true,
+        },
       })
     },
     { scope: root },
@@ -43,7 +59,7 @@ export default function Hero() {
     >
       <div
         ref={bg}
-        className="absolute inset-0 -top-[6%] scale-105 bg-cover bg-center will-change-transform"
+        className="absolute inset-0 -top-[6%] scale-105 bg-cover bg-center will-change-transform backface-hidden transform-[translateZ(0)]"
         style={{
           backgroundImage: "url('/assets/interior-wide.jpg')",
           filter: 'saturate(1.05) contrast(1.04) brightness(0.7)',
