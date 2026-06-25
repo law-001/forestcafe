@@ -10,8 +10,12 @@ export default function Hero() {
       if (reduced()) return
       // entrance
       const tl = gsap.timeline({ defaults: { ease: 'power3.out' } })
-      tl.from('[data-hero-line]', { yPercent: 120, opacity: 0, duration: 1.1, stagger: 0.12 }, 0.15)
-        .from('[data-hero-sub]', { y: 24, opacity: 0, duration: 0.9 }, '-=0.6')
+      tl.from(
+        '[data-hero-line]',
+        { y: 28, scale: 0.96, opacity: 0, duration: 1.3, ease: 'power2.out' },
+        0.15,
+      )
+        .from('[data-hero-sub]', { y: 24, opacity: 0, duration: 0.9 }, '-=0.7')
         .from('[data-hero-cta]', { opacity: 0, duration: 0.7, stagger: 0.1 }, '-=0.5')
 
       // background drift + zoom as the hero leaves
@@ -19,8 +23,8 @@ export default function Hero() {
         bg.current,
         { scale: 1.05, yPercent: 0, force3D: true, transformOrigin: '50% 50%' },
         {
-          scale: 1.45,
-          yPercent: 28,
+          scale: 1.22,
+          yPercent: 18,
           ease: 'none',
           force3D: true,
           transformOrigin: '50% 50%',
@@ -28,7 +32,7 @@ export default function Hero() {
             trigger: root.current,
             start: 'top top',
             end: 'bottom top',
-            scrub: 1.5,
+            scrub: 0.4,
             invalidateOnRefresh: true,
             fastScrollEnd: true,
           },
@@ -43,7 +47,7 @@ export default function Hero() {
           trigger: root.current,
           start: 'center top',
           end: 'bottom top',
-          scrub: 1.5,
+          scrub: 0.4,
           invalidateOnRefresh: true,
         },
       })
@@ -77,14 +81,12 @@ export default function Hero() {
         </span>
 
         <h1 className="m-0 flex w-full justify-center">
-          <span className="block overflow-hidden">
-            <img
-              data-hero-line
-              src="/assets/logo2.png"
-              alt="Forest Cafe"
-              className="block w-[clamp(18.25rem,calc(46vw+20px),35.25rem)]"
-            />
-          </span>
+          <img
+            data-hero-line
+            src="/assets/logo2.png"
+            alt="Forest Cafe"
+            className="block w-[clamp(18.25rem,calc(46vw+20px),35.25rem)] will-change-transform"
+          />
         </h1>
 
         <p
